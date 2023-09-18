@@ -5,21 +5,26 @@
     <title>Daftar Mahasiswa</title>
 </head>
 <body>
+    <!-- Judul halaman -->
     <h1>Daftar Mahasiswa</h1>
+    
+    <!-- Tabel untuk menampilkan daftar mahasiswa -->
     <table class="table table-hover">
         <thead>
+            <!-- Baris kepala tabel -->
             <tr>
                 <th>No</th>
                 <th>NIM</th>
                 <th>Nama</th>
                 <th>Alamat</th>
-                <th>Tanggal_lahir</th>
-                <th>Jenis_kelamin</th>
+                <th>Tanggal Lahir</th>
+                <th>Jenis Kelamin</th>
                 <th>Agama</th>
                 <th>Kelas</th>
             </tr>
         </thead>
         <tbody>
+            <!-- Baris-baris data mahasiswa -->
             <tr>
                 <td>1</td>
                 <td>G1A021046</td>
