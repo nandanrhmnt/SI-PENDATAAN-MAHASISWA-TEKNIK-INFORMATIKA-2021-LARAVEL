@@ -13,17 +13,17 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-// Route home
+// Route ke halaman home
 Route::get('/', function () {
     return view('home');
 });
 
-// Route daftar mahasiswa
+// Route ke halaman daftar mahasiswa
 Route::get('/mahasiswa', function () {
     return view('mahasiswa');
 });
 
-// Route tambah mahasiswa
+// Route ke halaman tambah mahasiswa
 Route::get('/tambahmahasiswa', function () {
     return view('tambahmahasiswa');
 });
