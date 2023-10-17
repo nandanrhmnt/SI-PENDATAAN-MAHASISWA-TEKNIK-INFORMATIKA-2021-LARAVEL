@@ -1,6 +1,14 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\AdminController;
+use Illuminate\Support\Facades\Auth;
+use App\Http\Controllers\HomeController;
+use App\Http\Controllers\MahasiswaController;
+use App\Http\Controllers\LoginController;
+use App\Http\Controllers\RegisterController;
+use App\Http\Controllers\UserController;
+
 
 /*
 |--------------------------------------------------------------------------
@@ -13,17 +21,21 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-// Route ke halaman home
+// Halaman Utama
 Route::get('/', function () {
-    return view('home');
-});
+    return view('welcome');
+})->name('home');
 
-// Route ke halaman daftar mahasiswa
-Route::get('/mahasiswa', function () {
-    return view('mahasiswa');
-});
+// Halaman register
+Route::get('/register', function () {
+    return view('register'); 
+})->name('register');
 
-// Route ke halaman tambah mahasiswa
-Route::get('/tambahmahasiswa', function () {
-    return view('tambahmahasiswa');
-});
+// Halaman login
+Route::get('/login', function () {
+    return view('login'); 
+})->name('login');
+
+// Halaman Admin
+Route::get('/admin/dashboard', [AdminController::class, 'dashboard'])->name('dashboardadmin.blade.php');
+Route::get('/admin/dashboard/datapribadimhs', [AdminController::class, 'datapribadimhs'])->name('pribadi.blade.php');
