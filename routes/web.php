@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AdminController;
+use App\Pribadi;
 use Illuminate\Support\Facades\Auth;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\MahasiswaController;
@@ -37,5 +38,6 @@ Route::get('/login', function () {
 })->name('login');
 
 // Halaman Admin
-Route::get('/admin/dashboard', [AdminController::class, 'dashboard'])->name('dashboardadmin.blade.php');
-Route::get('/admin/dashboard/datapribadimhs', [AdminController::class, 'datapribadimhs'])->name('pribadi.blade.php');
+Route::get('/admin/dashboard', [AdminController::class, 'dashboard'])->name('dashboard.blade.php');
+Route::get('/admin/dashboard/datapribadimhs', [AdminController::class, 'show'])->name('pribadi.blade.php');
+

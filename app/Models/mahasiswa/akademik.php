@@ -10,9 +10,9 @@ class Akademik extends Model
         'mahasiswa_id', 'IPK', 'nilai_mata_kuliah', 'prestasi_akademik',
     ];
 
-    public function mahasiswa()
+    public function pribadi()
     {
-        return $this->belongsTo(Mahasiswa::class);
+        return $this->belongsTo(Pribadi::class);
     }
 }
 

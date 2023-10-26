@@ -3,7 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Http\Models\Mahasiswa\Pribadi; 
+use App\Pribadi;
 
 class AdminController extends Controller
 {
@@ -15,12 +15,8 @@ class AdminController extends Controller
         return view('admin.dashboard', compact('adminName'));
     }
 
-    public function datapribadimhs()
+    public function show(Pribadi $pribadi)
     {
-        // Ambil data pribadi mahasiswa dari model Pribadi
-        $pribadi = Pribadi::all();
-
-        // Kirim data ke tampilan blade
-        return view('admin.datapribadimhs', compact('pribadi'));
+        return view('admin.data_pribadi.pribadi', compact('pribadi'));
     }
 }

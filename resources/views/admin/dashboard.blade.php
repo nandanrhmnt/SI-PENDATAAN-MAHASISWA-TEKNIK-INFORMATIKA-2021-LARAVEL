@@ -69,7 +69,7 @@
                 <img src="https://i.pinimg.com/736x/ad/20/81/ad20818dde8a21024378095c37c1cbba.jpg" alt="Foto Profil">
                 <h4>Nama Admin</h4>
             </div>
-            <a href="/admin/dashboard/datapribadimhs">Data Pribadi Mahasiswa</a>
+            <a href="{{ route('pribadi.blade.php') }}">Data Pribadi Mahasiswa</a>
             <a href="/admin/dashboard/dataakademikmhs">Data Akademik Mahasiswa</a>
             <a href="/admin/dashboard/datakegiatanmhs">Data Kegiatan Mahasiswa</a>
             <a href="/admin/dashboard/datalainnyamhs">Data Lainnya</a>
